@@ -1,0 +1,71 @@
+[
+    {
+        "title": "Role Unassigned",
+        "department_id" : "1"
+    },
+    {
+        "title": "Big Boss", 
+        "salary": 1000000.00,
+        "department_id": "2"
+    },
+    {
+        "title": "Lead Security", 
+        "salary": 100000.00,
+        "department_id": "3"
+    },
+    {
+        "title": "Security Enforcer", 
+        "salary": 90000.00,
+        "department_id": "3"
+    },
+    {
+        "title": "Security Guard", 
+        "salary": 70000.00,
+        "department_id": "3"
+    },
+    {
+        "title": "Engineering Lead", 
+        "salary": 400000.00,
+        "department_id": "4"
+    },
+    {
+        "title": "Web Developer", 
+        "salary": 160000.00,
+        "department_id": "4"
+    },
+    {
+        "title": "Software Tester", 
+        "salary": 85000.00,
+        "department_id": "4"
+    },
+    {
+         "title": "Head of Product", 
+         "salary": 200000.00,
+         "department_id": "5"
+     },
+     {
+         "title": "Product Owner", 
+         "salary": 120000.00,
+         "department_id": "5"
+     },
+     {
+         "title": "Product Support", 
+         "salary": 60000.00,
+         "department_id": "5"
+     },
+    {
+        "title": "Head of Marketing", 
+        "salary": 220000.00,
+        "department_id": "6"
+    },
+    {
+        "title": "Designer", 
+        "salary": 70000.00,
+        "department_id": "6"
+    },
+    {
+        "title": "Copyrighter", 
+        "salary": 200000.00,
+        "department_id": "6"
+    }
+]

@@ -4,7 +4,8 @@
   "description": "Command line Employee Manager app interfaces with mysql database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/conradjohnson/employee-mgr-m12#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "2": "^3.0.0",
+    "console.table": "^0.10.0",
+    "dotenv": "^16.0.3",
+    "inquirer": "^8.2.4",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.1"
   }
 }

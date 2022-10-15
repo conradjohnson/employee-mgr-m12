@@ -1,0 +1,100 @@
+[
+    {
+        "first_name":"Unassigned",
+        "last_name": "Manager",
+        "role_id": "1",
+        "manager_id":"1"
+    },
+    {
+        "first_name":"Jimmy",
+        "last_name": "James",
+        "role_id": "2",
+        "manager_id":"1"
+    }, 
+    {
+        "first_name":"Block",
+        "last_name": "Head",
+        "role_id": "3",
+        "manager_id":"2"
+    }, 
+    {
+        "first_name":"Guardian (Dave)",
+        "last_name": "Morris",
+        "role_id": "4",
+        "manager_id":"3"
+    },
+    {
+        "first_name":"Other Dave",
+        "last_name": "Morris",
+        "role_id": "4",
+        "manager_id":"3"
+    }, 
+    {
+        "first_name":"Other Dave",
+        "last_name": "Morristrack",
+        "role_id": "5",
+        "manager_id":"3"
+    },
+    {
+        "first_name":"Dave's Cousin",
+        "last_name": "Morriscus",
+        "role_id": "5",
+        "manager_id":"3"
+    },
+    {
+        "first_name":"Englbert",
+        "last_name": "Matheson",
+        "role_id": "6",
+        "manager_id":"2"
+    },
+    {
+        "first_name":"Eng Jr",
+        "last_name": "Matheson",
+        "role_id": "7",
+        "manager_id":"8"
+    },
+    {
+        "first_name":"Duo",
+        "last_name": "Testes",
+        "role_id": "8",
+        "manager_id":"8"
+    },
+    {
+        "first_name":"Percy",
+        "last_name": "Productor",
+        "role_id": "9",
+        "manager_id":"2"
+    },
+    {
+        "first_name":"Pown",
+        "last_name": "Thatprod",
+        "role_id": "10",
+        "manager_id":"11"
+    },
+    {
+        "first_name":"Really",
+        "last_name": "Supportivson",
+        "role_id": "11",
+        "manager_id":"11"
+    },
+    {
+        "first_name":"Laney",
+        "last_name": "Fisher",
+        "role_id": "12",
+        "manager_id":"2"
+    },
+    {
+        "first_name":"Laney Jr",
+        "last_name": "Fisher",
+        "role_id": "13",
+        "manager_id":"14"
+    },
+    {
+        "first_name":"Maureen",
+        "last_name": "Writer",
+        "role_id": "14",
+        "manager_id":"14"
+    }
+
+
+]
