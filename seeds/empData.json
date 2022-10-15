@@ -2,8 +2,7 @@
     {
         "first_name":"Unassigned",
         "last_name": "Manager",
-        "role_id": "1",
-        "manager_id":"1"
+        "role_id": "1"
     },
     {
         "first_name":"Jimmy",

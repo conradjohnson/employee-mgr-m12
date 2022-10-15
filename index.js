@@ -1,12 +1,12 @@
 const inquirer = require('inquirer');
-const questions = require('./lib/questions');
+const  {main_menu}  = require('./lib/menus');
 const header = require('./lib/header');
 const greeting = require('./lib/greeting');
 const exit_message = require('./lib/exit_message');
 
 
-const showMenu = async () => {
-    const answer = await inquirer.prompt(questions);
+const startMainMenu = async () => {
+    const answer = await inquirer.prompt(main_menu);
     console.log(answer)
     return answer;
 }
@@ -16,7 +16,7 @@ const main = async () => {
    // console.log(greeting);
     console.log(header());
     while (loop) {
-      await showMenu()
+      await startMainMenu()
       .then(answers => {
         // Top level menu options back from main_menu
         if (answers.emp_menu === 'get_emp'){
