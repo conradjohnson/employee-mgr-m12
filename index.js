@@ -23,7 +23,6 @@ const main = async () => {
       .then(async answers => {
         
         // Top level menu options back from main_menu
-        if (answers.emp_menu != 'back' && answers.role_menu != 'back' && answers.dept_menu != 'back' ){
           // that means we want some function to call in either one of the sub menus.
           console.log("HERE's some action!");
           
@@ -32,7 +31,16 @@ const main = async () => {
             console.log("Employee function");
             let emp_menu_action = answers.emp_menu;
             let emp_reply = await employeeFunctions(emp_menu_action);
-            //console.log(emp_reply);
+            if (emp_reply != "back"){
+              emp_reply = await employeeFunctions(emp_menu_action);
+            }
+            //  do{
+
+            //    emp_reply = await employeeFunctions(emp_menu_action);
+            //  } while (emp_reply!='back');
+
+            console.log("!!!!!!!!!!!!!!")
+            console.log("emp_reply: " + emp_reply);
           }
 
           // If user selected a Role Function
@@ -45,7 +53,7 @@ const main = async () => {
             console.log("Dept functions");
           }
 
-        }
+        
        
        // Exit Employee Manager (close program)
        if (answers.main_menu === 'exit'){
