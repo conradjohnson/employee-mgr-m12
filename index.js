@@ -1,9 +1,11 @@
 const inquirer = require('inquirer');
-const  {main_menu, emp_menu}  = require('./lib/menus');
+const  {main_menu, emp_menu, role_menu, dept_menu}  = require('./lib/menus');
 const header = require('./lib/header');
 const greeting = require('./lib/greeting');
 const exit_message = require('./lib/exit_message');
 const employeeFunctions = require('./lib/employeeFunctions');
+const roleFunctions = require('./lib/roleFunctions');
+const deptFunctions = require('./lib/deptFunctions');
 
 const startMainMenu = async () => {
     const answer = await inquirer.prompt(main_menu);
@@ -12,6 +14,16 @@ const startMainMenu = async () => {
 }
 const startEmployeeMenu = async () => {
   const answer = await inquirer.prompt(emp_menu);
+  console.log(answer)
+  return answer;
+}
+const startRoleMenu = async () => {
+  const answer = await inquirer.prompt(role_menu);
+  console.log(answer)
+  return answer;
+}
+const startDeptMenu = async () => {
+  const answer = await inquirer.prompt(dept_menu);
   console.log(answer)
   return answer;
 }
@@ -38,43 +50,53 @@ const main = async () => {
           if (answers.main_menu === 'menu_emp'){
             console.log("Employee function");
             let emp_menu_loop = true;
-            await startEmployeeMenu()
-            .then(async emp_menu_ans=>{
-              console.log("empmenu:" + emp_menu_ans.emp_menu);
-              await employeeFunctions(emp_menu_ans.emp_menu)
-              .then(async emp_reply =>{
-                 if (emp_reply === 'back'){
-                   emp_menu_loop = false;
-                 }})
-            })
-
-           // while(emp_menu_loop){
-              
-              
-             
-             // })
-              // if (emp_reply != "back"){
-              //   console.log('here')
-              //   emp_reply = await employeeFunctions(emp_menu_action);
-              // }
-              //  do{
-
-              //    emp_reply = await employeeFunctions(emp_menu_action);
-              //  } while (emp_reply!='back');
-
-              // console.log("!!!!!!!!!!!!!!")
-              // console.log("emp_reply: " + emp_reply);
-          //  }
-        }
+            while(emp_menu_loop){
+              await startEmployeeMenu()
+              .then(async emp_menu_ans=>{
+                console.log("empmenu:" + emp_menu_ans.emp_menu);
+                await employeeFunctions(emp_menu_ans.emp_menu)
+                .then(async emp_reply =>{
+                  if (emp_reply === 'back'){
+                    emp_menu_loop = false;
+                  }})
+              })
+            }
+          }
 
           // If user selected a Role Function
-          if (answers.role_menu){
-            console.log("Role Functions");
+          if (answers.main_menu === 'menu_role'){
+            console.log("HR/Role Functions");
+            
+            let role_menu_loop = true;
+            while(role_menu_loop){
+              await startRoleMenu()
+              .then(async role_menu_ans=>{
+                console.log("rolemenu:" + role_menu_ans.role_menu);
+                await roleFunctions(role_menu_ans.role_menu)
+                .then(async role_reply =>{
+                  if (role_reply === 'back'){
+                    role_menu_loop = false;
+                  }})
+              })
+            }
           }
 
           // If user selected a Department Function
-          if (answers.dept_menu){
-            console.log("Dept functions");
+          if (answers.main_menu === 'menu_dept'){
+            console.log("Department Functions");
+            
+            let dept_menu_loop = true;
+            while(dept_menu_loop){
+              await startDeptMenu()
+              .then(async dept_menu_ans=>{
+                console.log("rolemenu:" + dept_menu_ans.dept_menu);
+                await deptFunctions(dept_menu_ans.dept_menu)
+                .then(async dept_reply =>{
+                  if (dept_reply === 'back'){
+                    dept_menu_loop = false;
+                  }})
+              })
+            }
           }
 
         
