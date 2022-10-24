@@ -46,7 +46,8 @@ Screen Shots:
 ## Usage
 ***
 
-have a mysql server installed with 'employeemgr_db' database created.  Create .env file in root directory with DB_NAME, BD_User, and DB_PASSWORD values defined.   'npm run seed' if you'd like to seed the database with test values.  Then 'node indes.js to run program. 
+have a mysql server installed with 'employeemgr_db' database created.  Create .env file in root directory with DB_NAME, BD_User, and DB_PASSWORD values defined.   There is test seed data available in seeds directory, 'npm run seed' if you'd like to seed the database with test values.  Then 'node index.js' to run program. 
+
 
 ## Credits
 ***
